@@ -1,0 +1,14 @@
+language: haskell
+before_install:
+- curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
+- chmod 755 ./travis-tool.sh
+- "./travis-tool.sh bootstrap"
+install:
+- "./travis-tool.sh install_github rstudio/rmarkdown"
+- "./travis-tool.sh install_deps"
+- travis_retry cabal install pandoc pandoc-citeproc
+- travis_retry bundle install
+script: bundle exec rake site:deploy --quiet
+env:
+  global:
+  - secure: "BIozd2MANqvXaIxlgfJlR4nO9X9L7FNrgZFBht5JdNvu6aGueKFWsnDqTVUJZhV13UfcvFRviPemrvdcGC5d4o54ZAOhaUZnQgI2LLAinhkNOZcdfK4pkG6L3eYoRFW2/KC+olY0qSEX7BgbD6R1ciZ/hnHr96rgMu0nW+FN2gY="
