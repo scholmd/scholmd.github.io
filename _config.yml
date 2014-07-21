@@ -13,7 +13,7 @@ keep_files:  ['.git','figures']
 # repo defaults to USERNAME.github.io
 # Branch defaults to "source" for USERNAME.github.io
 # or "master" otherwise
-username: mfenner
+username: scholmd
 
 exclude:
   - README.md
