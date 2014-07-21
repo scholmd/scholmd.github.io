@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Tools to support your markdown authoring
+title: Tools to Support Your Markdown Authoring
 modified_date: 21 July 2014
 category: basic_setup
 published: true

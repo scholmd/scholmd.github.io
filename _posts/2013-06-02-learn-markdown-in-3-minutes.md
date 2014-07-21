@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Learn markdown in 3 minutes
+title: Learn Markdown in 3 Minutes
 modified_date: 21 July 2014
 category: basic_setup
 published: true

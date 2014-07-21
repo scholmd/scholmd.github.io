@@ -1,0 +1,45 @@
+---
+layout: post
+title: Equations
+modified_date: 21 July 2014
+category: markdown_elements
+published: true
+---
+
+## MathML the "HTML for math"
+
+The web (HTML5), ebook (epub3) and publishing (XML) standard for mathematical equations is [MathML](https://en.wikipedia.org/wiki/MathML). Just like HTML, MathML can be highly verbose, so manual input is usually done using other tools. In particular, there are several serial math input formats (see below).<!--more-->
+
+
+Many markdown parser tolerate HTML fragments, so MathML fragment can be used when manual input languages are not sufficient.
+
+## Serialized math syntax
+
+Markdown is usually combined with the most established ones: **LaTeX-like** syntax (preferrably compatible with MathJax) and **ASCIImath** syntax.
+
+### LaTeX-like
+
+The most frequently used syntax can be described as "LaTeX-like". Using LaTeX syntax for math notation has many advantages, the biggest is the number of tools available for LaTeX. This makes it the most versatile syntax for conversion into other formats (MS Word via MathML, PDF via LaTeX, HTML using MathJax).
+
+For HTML output, the most frequently used tool is [MathJax](http://www.mathjax.org), an open source javascript library that can render LaTeX, ASCIImath, and MathML in all browsers. For a list of LaTeX commands that work with MathJax, see the [MathJax documentation](http://docs.mathjax.org/en/latest/tex.html).
+
+### ASCIImath
+
+[ASCIImath](http://www1.chapman.edu/~jipsen/mathml/asciimath.html) is simpler (and less powerful) as a syntax. It is designed to be converted to MathML and is supported by [MathJax](http://docs.mathjax.org/en/latest/asciimath.html).
+
+
+### jqMath
+
+Another option is [jqmath](http://mathscribe.com/author/jqmath.html), which is designed as a serialization of MathML.
+
+
+## Conversion
+
+In the conversion process from markdown to other formats, the following options are most frequent:
+
+* nothing special.
+  * Depending on the markdown converter this can work well or be disastrous. Especially "classic" mardkown parsers will interpret every backslash as an escape character and render LaTeX syntax useless.
+* leaving the input untouched
+  * Some parsers like pandoc have added extensions which identify math delimiters (usually `$`) and treat the content between delimiters as verbatim text -- leaving the correct rendering to other tools such as MathJax.
+* converting equations to MathML
+* converting equations to images
