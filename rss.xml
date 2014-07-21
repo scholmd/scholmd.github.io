@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>Scholarly Markdown</title>
+        <description>Scholarly Markdown - </description>
+        <link>http:/www.scholmd.org/rss.xml</link>
+        <link>http:/www.scholmd.org</link>
+        <lastBuildDate>2014-07-21T23:15:23+00:00</lastBuildDate>
+        <pubDate>2014-07-21T23:15:23+00:00</pubDate>
+        <ttl>1800</ttl>
+
+
+        <item>
+                <title>Equations</title>
+                <description>&lt;h2 id=&quot;mathml-the-html-for-math&quot;&gt;MathML the “HTML for math”&lt;/h2&gt;
+&lt;p&gt;The web (HTML5), ebook (epub3) and publishing (XML) standard for mathematical equations is &lt;a href=&quot;https://en.wikipedia.org/wiki/MathML&quot;&gt;MathML&lt;/a&gt;. Just like HTML, MathML can be highly verbose, so manual input is usually done using other tools. In particular, there are several serial math input formats (see below).&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;Many markdown parser tolerate HTML fragments, so MathML fragment can be used when manual input languages are not sufficient.&lt;/p&gt;
+&lt;h2 id=&quot;serialized-math-syntax&quot;&gt;Serialized math syntax&lt;/h2&gt;
+&lt;p&gt;Markdown is usually combined with the most established ones: &lt;strong&gt;LaTeX-like&lt;/strong&gt; syntax (preferrably compatible with MathJax) and &lt;strong&gt;ASCIImath&lt;/strong&gt; syntax.&lt;/p&gt;
+&lt;h3 id=&quot;latex-like&quot;&gt;LaTeX-like&lt;/h3&gt;
+&lt;p&gt;The most frequently used syntax can be described as “LaTeX-like”. Using LaTeX syntax for math notation has many advantages, the biggest is the number of tools available for LaTeX. This makes it the most versatile syntax for conversion into other formats (MS Word via MathML, PDF via LaTeX, HTML using MathJax).&lt;/p&gt;
+&lt;p&gt;For HTML output, the most frequently used tool is &lt;a href=&quot;http://www.mathjax.org&quot;&gt;MathJax&lt;/a&gt;, an open source javascript library that can render LaTeX, ASCIImath, and MathML in all browsers. For a list of LaTeX commands that work with MathJax, see the &lt;a href=&quot;http://docs.mathjax.org/en/latest/tex.html&quot;&gt;MathJax documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;asciimath&quot;&gt;ASCIImath&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www1.chapman.edu/~jipsen/mathml/asciimath.html&quot;&gt;ASCIImath&lt;/a&gt; is simpler (and less powerful) as a syntax. It is designed to be converted to MathML and is supported by &lt;a href=&quot;http://docs.mathjax.org/en/latest/asciimath.html&quot;&gt;MathJax&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;jqmath&quot;&gt;jqMath&lt;/h3&gt;
+&lt;p&gt;Another option is &lt;a href=&quot;http://mathscribe.com/author/jqmath.html&quot;&gt;jqmath&lt;/a&gt;, which is designed as a serialization of MathML.&lt;/p&gt;
+&lt;h2 id=&quot;conversion&quot;&gt;Conversion&lt;/h2&gt;
+&lt;p&gt;In the conversion process from markdown to other formats, the following options are most frequent:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;nothing special.&lt;/li&gt;
+&lt;li&gt;Depending on the markdown converter this can work well or be disastrous. Especially “classic” mardkown parsers will interpret every backslash as an escape character and render LaTeX syntax useless.&lt;/li&gt;
+&lt;li&gt;leaving the input untouched&lt;/li&gt;
+&lt;li&gt;Some parsers like pandoc have added extensions which identify math delimiters (usually &lt;code&gt;$&lt;/code&gt;) and treat the content between delimiters as verbatim text – leaving the correct rendering to other tools such as MathJax.&lt;/li&gt;
+&lt;li&gt;converting equations to MathML&lt;/li&gt;
+&lt;li&gt;converting equations to images&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</description>
+                <link>http:/www.scholmd.org/markdown_elements/equations.html</link>
+                <guid>http:/www.scholmd.org/markdown_elements/equations</guid>
+                <pubDate>2013-06-06T00:00:00+00:00</pubDate>
+        </item>
+
+        <item>
+                <title>Citations</title>
+                <description>&lt;h3 id=&quot;citations-breakout-group-at-markdown-for-science-workshop&quot;&gt;Citations breakout group at Markdown for Science workshop&lt;/h3&gt;
+&lt;p&gt;Citations should be specified as citation keys (e.g. &lt;span class=&quot;citation&quot; data-cites=&quot;smith2010&quot;&gt;(&lt;span class=&quot;citeproc-not-found&quot; data-reference-id=&quot;smith2010&quot;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt;. Pandoc and Multimarkdown both support human-readable formatting for this, but use different formatting.&lt;!--more--&gt;&lt;/p&gt;
+&lt;h4 id=&quot;we-identified-two-use-cases&quot;&gt;We identified two use cases:&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;fragment of a scientific document&lt;/li&gt;
+&lt;li&gt;complete document, e.g. manuscript for paper&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reference information should be stored in an external bibtex file, which could be referenced by a link or be in the same folder as the markdown file, specified in the metadata.&lt;/p&gt;
+&lt;p&gt;Citation styles should be processed using Citeproc and the Citation Style Language. Citation style can optionally be specified in the metadata.&lt;/p&gt;
+&lt;h4 id=&quot;questions-from-the-audience&quot;&gt;Questions from the audience :)&lt;/h4&gt;
+&lt;p&gt;Stian: Is there any good online collaborative citation manager that supports citekeys (defining/seeing)?&lt;/p&gt;
+&lt;h3 id=&quot;citation-discussion-at-gobbledygook-blog&quot;&gt;Citation discussion at Gobbledygook Blog&lt;/h3&gt;
+&lt;p&gt;A &lt;a href=&quot;http://blog.martinfenner.org/2013/06/19/citations-in-scholarly-markdown/&quot;&gt;blog post&lt;/a&gt;, and a very good discussion clarified many issues around citations.&lt;/p&gt;
+&lt;h4 id=&quot;rethink-current-practices&quot;&gt;Rethink current practices&lt;/h4&gt;
+&lt;p&gt;Most of the things we currently with citations come from a time when journal articles were printed on paper. Examples include citation styles and reference lists. Moving forward we should rethink these practices:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Citation styles should not be the concern of the author. There is no place for citation styles, or citation formatted with a particular citation style in a markdown document.&lt;/li&gt;
+&lt;li&gt;Reference lists often don’t make sense for digital documents. What we rather need are good inline links, plus references in a computer-readable format (e.g. bibtex). One challenge with reference lists is the synchronization between inline citations and the reference list.&lt;/li&gt;
+&lt;li&gt;Separate files for references create unnecessary overhead and can lead to vendor lock-in. Ideally all the required information should be stored in the markdown document. We should rather export the references from the markdown file to bibtex when transforming to HTML or other output formats (see above).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;suggested-approach&quot;&gt;Suggested approach&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Citations are links. Thinking of citations as links makes the workflow much easier.&lt;/li&gt;
+&lt;li&gt;Use reference-style links for documents with many citations. This makes it easier to manage the citations, e.g. when the same paper is cited more than once.&lt;/li&gt;
+&lt;li&gt;You can use citation keys with reference-style links, and this makes it easy to integrate with reference managers (Papers for example supports &lt;code&gt;[#key][]&lt;/code&gt;).&lt;/li&gt;
+&lt;li&gt;Use the “title” attribute with reference-style links, using the citation title. DOIs (and often also weblinks) are not human-readable. Using the title makes citations easier to remember and prevents transcription errors (i.e. typos in DOIs or URLs):&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code&gt;[#Beyer2013]: http://dx.doi.org/ 10.1093/annonc/mds579 &amp;quot;Maintaining success, reducing treatment burden,
+focusing on survivorship: highlights from the third European consensus conference on diagnosis and
+treatment of germ-cell cancer.&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;The transformation from markdown into a presentation format (e.g. HTML or PDF) should include link checking (see proof of concept tools below).&lt;/li&gt;
+&lt;li&gt;We should support internal links to tables and figures, using anchors.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;questions&quot;&gt;Questions&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;How do we handle citations that can’t be linked to digital resources? Two ideas are footnotes and placeholder hyperlinks (and &lt;a&gt; tag without href, new in HTML5).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;todo&quot;&gt;Todo&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Proof of concept tool that transform links in markdown documents into references, e.g. by pulling information from CrossRef or DataCite.&lt;/li&gt;
+&lt;li&gt;Proof of concept tool to display reference information on hover in HTML documents created from markdown.&lt;/li&gt;
+&lt;li&gt;Proof of concept tool that extracts all links from a markdown document and generates both a bibliography and bibtex file.&lt;/li&gt;
+&lt;li&gt;Best practices how citation information can be stored in HTML link. Probably involves data- attributes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;citation-styles&quot;&gt;Citation Styles&lt;/h3&gt;
+&lt;h4 id=&quot;reference-manager-support-for-workflow-above&quot;&gt;Reference Manager support for workflow above&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Papers. Allows copy/paste of citekey in different formats (including MMD, Pandoc)&lt;/li&gt;
+&lt;li&gt;Mendeley. Copy/paste of citekey in LaTeX format. Allows custom citekeys. Can automatically sync with bibtex file.&lt;/li&gt;
+&lt;li&gt;Zotero. ?&lt;/li&gt;
+&lt;li&gt;Endnote. ?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;downloading-styles&quot;&gt;Downloading styles&lt;/h4&gt;
+&lt;p&gt;This repo contains citation styles for most journals. Download a copy of the repo somewhere locally by running:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git clone git://github.com/citation-style-language/styles.git&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</description>
+                <link>http:/www.scholmd.org/markdown_elements/citations.html</link>
+                <guid>http:/www.scholmd.org/markdown_elements/citations</guid>
+                <pubDate>2013-06-03T00:00:00+00:00</pubDate>
+        </item>
+
+        <item>
+                <title>Learn Markdown in 3 Minutes</title>
+                <description>&lt;p&gt;Markdown syntax is extremely simple and you can learn all you need to know within a few minutes.&lt;!--more--&gt;&lt;/p&gt;
+&lt;h2 id=&quot;formatting-headings&quot;&gt;Formatting headings&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;# First level
+## Second Level
+### Third level
+#### Fourth level
+##### Fifth level
+###### Sixth level&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;bold-and-italics&quot;&gt;&lt;strong&gt;Bold&lt;/strong&gt; and &lt;em&gt;Italics&lt;/em&gt;&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;Bold: **some text**
+
+Italics:  _some other text_
+
+Also italics: *this is also italics*&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;links&quot;&gt;Links&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;[link text](link)
+example: [click here for a web page](http://google.com)&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;figures-and-images&quot;&gt;Figures and Images&lt;/h2&gt;
+&lt;p&gt;Figures are formatted the same as links but just add a &lt;code&gt;!&lt;/code&gt; before the square bracked.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;![text description](/path/to/image)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can have a picture with a link:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[![text description](/path/to/image)](http://twitter.com)&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;horizontal-lines&quot;&gt;Horizontal lines&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;***
+
+or
+
+---&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;code-and-verbatim&quot;&gt;Code and verbatim&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;Inline code: `some code`
+
+Code block:
+
+    some code
+    and another line of code
+    some more code
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Subscript (Pandoc only)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;R~0~&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Superscript (Pandoc only)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;x^2^&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That’s most of the formatting you’ll need to get by. I’ll get into citation and table formatting on a separate page.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</description>
+                <link>http:/www.scholmd.org/basic_setup/learn-markdown-in-3-minutes.html</link>
+                <guid>http:/www.scholmd.org/basic_setup/learn-markdown-in-3-minutes</guid>
+                <pubDate>2013-06-02T00:00:00+00:00</pubDate>
+        </item>
+
+        <item>
+                <title>Tools to Support Your Markdown Authoring</title>
+                <description>&lt;p&gt;Markdown is automatically rendered to html GitHub but can easily be parsed into a variety of other formats including PDF and LaTex. To convert seamlessly to these formats, you’ll need a document converter. &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt; is one such open source tool that is available on all platforms. You’ll need to install a local copy to be able to run all the examples in this repo.&lt;!--more--&gt;&lt;/p&gt;
+&lt;h2 id=&quot;pandoc&quot;&gt;Pandoc&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt; is a universal document converter. It works from the command line and you can quickly convert a document between any two formats. These include nearly all formats commonly used for scientific writing such as Word, Markdown, Latex, HTML and RTF.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://johnmacfarlane.net/pandoc/installing.html&quot;&gt;Download and install pandoc&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;standalone-applications&quot;&gt;Standalone applications&lt;/h2&gt;
+&lt;h3 id=&quot;texts&quot;&gt;Texts&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.texts.io&quot;&gt;Texts&lt;/a&gt; is rich editor for Markdown, with multiple export options (e.g. PDF, Microsoft Word, LaTeX, HTML, ePub).&lt;/p&gt;
+&lt;h3 id=&quot;byword&quot;&gt;ByWord&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.bywordapp.com&quot;&gt;ByWord&lt;/a&gt; is a simple text editor for OS X and iOS.&lt;/p&gt;
+&lt;h3 id=&quot;mou&quot;&gt;Mou&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://mouapp.com&quot;&gt;Mou&lt;/a&gt; is a simple, free, and powerful Markdown editor/previewer for OS X.&lt;/p&gt;
+&lt;h3 id=&quot;markdownpad&quot;&gt;MarkdownPad&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://markdownpad.com/&quot;&gt;MarkdownPad&lt;/a&gt; is a Markdown editor for Windows. Both a Free and a Pro version exist; the latter adds support for (amongst other things) GitHub Flavored Markdown and Markdown Extra (including Tables).&lt;/p&gt;
+&lt;h3 id=&quot;multimarkdown-composer&quot;&gt;MultiMarkdown Composer&lt;/h3&gt;
+&lt;p&gt;“&lt;a href=&quot;http://multimarkdown.com&quot;&gt;MultiMarkdown Composer&lt;/a&gt; is a text editor for Mac that is designed from the ground up around the MultiMarkdown Syntax. It is designed to make writing in MultiMarkdown (or Markdown) even easier than it already is, with automatic syntax highlighting, built in previews, easy export to any format that is supported by MultiMarkdown, and more!” [http://multimarkdown.com].&lt;/p&gt;
+&lt;h3 id=&quot;retext&quot;&gt;ReText&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://sourceforge.net/p/retext/home/ReText/&quot;&gt;ReText&lt;/a&gt; is an open-source, platform-independent editor for both Markdown and reStructuredText.&lt;/p&gt;
+&lt;h3 id=&quot;qute&quot;&gt;Qute&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fbreuer/qute&quot;&gt;Qute&lt;/a&gt;, is an open source, platform-independent editor for Markdown with MathJax-integrated live-preview.&lt;/p&gt;
+&lt;h3 id=&quot;erato&quot;&gt;Erato&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://9muses.se/erato/&quot;&gt;Erato&lt;/a&gt; is a markdown editor for Mac users, supporting Github-flavored Markdown, including YAML front matter and task lists.&lt;/p&gt;
+&lt;h2 id=&quot;web-based-applications&quot;&gt;Web-based applications&lt;/h2&gt;
+&lt;h3 id=&quot;draft&quot;&gt;Draft&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://draftin.com&quot;&gt;Draft&lt;/a&gt; is a web-based markdown editor with cloud sync, image hosting and analytics.&lt;/p&gt;
+&lt;h3 id=&quot;markable&quot;&gt;Markable&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://markable.in/&quot;&gt;Markable&lt;/a&gt; is another web-based markdown editor with export and integration options.&lt;/p&gt;
+&lt;h3 id=&quot;prose.io&quot;&gt;Prose.io&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://prose.io&quot;&gt;Prose&lt;/a&gt; is a web-based markdown editor for Github Pages.&lt;/p&gt;
+&lt;h2 id=&quot;previewers&quot;&gt;Previewers&lt;/h2&gt;
+&lt;h3 id=&quot;marked&quot;&gt;Marked&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://markedapp.com&quot;&gt;Marked&lt;/a&gt; is a markdown previewer for OS X.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</description>
+                <link>http:/www.scholmd.org/basic_setup/tools-to-support-your-markdown-authoring.html</link>
+                <guid>http:/www.scholmd.org/basic_setup/tools-to-support-your-markdown-authoring</guid>
+                <pubDate>2013-06-01T00:00:00+00:00</pubDate>
+        </item>
+
+
+</channel>
+</rss>
