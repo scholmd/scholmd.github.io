@@ -60,7 +60,7 @@ author:
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 
 production_url:  http:/www.scholmd.org
-source_url:
+source_url:      https://github.com/scholmd/scholmd.github.io
 archive_path:    /archive.html
 categories_path: /categories.html
 tags_path:       /tags.html
