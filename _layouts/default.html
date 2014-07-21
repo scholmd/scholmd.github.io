@@ -19,10 +19,8 @@
         <div class="col-md-8 col-md-offset-2">
           <div class="page-header">
             <h1>{{ page.title }}</h1>{% if page.title == "Scholarly Markdown" %}
-            <p>A blog about how the internet is changing scholarly communication.</p>{% else %}
-            <p>{% if page.date %}{{ page.date | date_to_long_string }} by
-            <a href="/about.html">{{ site.author.name }}</a>{% endif %}{% endif %}
-            </p>{% endif %}
+            <p>Keep it simple. Have fun.</p>{% endif %}
+            </p>
           </div>
         </div>
       </div>
@@ -49,9 +47,6 @@
                 <hr>
                 <div class="toc-item">
                   <h3>Next: <a href="{{ page.next.url }}">{{ page.next.title }}</a></h3>
-                  {% if page.next.authors %}<p>{% for author in page.next.authors %}
-                    {{ author.name }}{% if forloop.rindex > 2 %}, {% elsif forloop.rindex > 1 %} & {% endif %}{% endfor %}</p>
-                  {% endif %}
                   <p>{{ page.next.excerpt | markdownify | strip_html }}</p>
                 </div>
               {% endif %}
