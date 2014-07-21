@@ -2,9 +2,20 @@
 layout: default
 title: Scholarly Markdown
 ---
-<div class="index">
-{% for post in paginator.posts %}
-  <h3><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date_to_string }}</small></h3>
-  <p>{{ post.excerpt | strip_html }}</p>
+
+{% for category in site.categories %}
+  <div class="toc">
+    <h2>{{ category | first | titleize }}</h2>
+    {% assign number = category.last.last.date | date: "%d" %}
+    <ol start="{{ number }}">
+      {% for post in category.last reversed %}
+        <li>
+          <div class="toc-item">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a> <small>{{ post.date | date_to_string }}</small></h3>
+            <p>{{ post.excerpt | strip_html }}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
 {% endfor %}
-</div>

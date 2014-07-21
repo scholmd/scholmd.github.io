@@ -51,6 +51,20 @@ author:
   github: mfenner
   twitter: mfenner
 
+chapters:
+ - name: Basic setup
+   path: basic_setup
+ - name: Markdown elements
+   path: markdown_elements
+ - name: Advanced formatting
+   path: advanced_formatting
+ - name: Examples
+   path: examples
+ - name: Wish list
+   path: wish_list
+ - name: Workshop
+   path: workshop
+
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
 # Most places will/should use BASE_PATH to make the urls
