@@ -2,22 +2,22 @@
 <html lang="en">
 
     <head>
-    <title>Learn Markdown in 3 Minutes</title>
+    <title>Extending Markdown</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="" />
 
     <!-- RDFa Metadata (in DublinCore) -->
-    <meta property="dc:title" content="Learn Markdown in 3 Minutes" />
+    <meta property="dc:title" content="Extending Markdown" />
     <meta property="dc:format" content="text/html" />
     <meta property="dc:language" content="en" />
-    <meta property="dc:identifier" content="/basic_setup/learn-markdown-in-3-minutes.html" />
+    <meta property="dc:identifier" content="/advanced_formatting/extending-markdown.html" />
     <meta property="dc:rights" content="CC-BY-NC" />
     <meta property="dc:source" content="Scholarly Markdown" />
     <meta property="dc:subject" content="Scholarly Communication" />
     <meta property="dc:type" content="website" />
 
     <!-- Google Scholar Metadata -->
-    <meta name="citation_title" content="Learn Markdown in 3 Minutes"/>
+    <meta name="citation_title" content="Extending Markdown"/>
     <meta name="citation_journal_title" content="Scholarly Markdown"/>
 
     <link rel="alternate" type="application/rss+xml" title="Scholarly Markdown" href="/rss.xml" />
@@ -51,10 +51,10 @@
   <a class="navmenu-brand" href="#">Scholarly Markdown</a>
   <ul class="nav navmenu-nav">
   
-    <li><span class="glyphicon glyphicon-calendar"></span> 21 July 2014</li>
+    <li><span class="glyphicon glyphicon-calendar"></span> 22 July 2014</li>
   
-    <li><span class="glyphicon glyphicon-time"></span> <a href="https://github.com/scholmd/scholmd.github.io/commits/source/_posts/2013-01-02-learn-markdown-in-3-minutes.md">Version History</a></li>
-    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#scholmd/scholmd.github.io/edit/source/_posts/2013-01-02-learn-markdown-in-3-minutes.md">Send Edit Request</a></li>
+    <li><span class="glyphicon glyphicon-time"></span> <a href="https://github.com/scholmd/scholmd.github.io/commits/source/_posts/2013-03-01-extending-markdown.md">Version History</a></li>
+    <li><span class="glyphicon glyphicon-edit"></span> <a href="http://prose.io/#scholmd/scholmd.github.io/edit/source/_posts/2013-03-01-extending-markdown.md">Send Edit Request</a></li>
     
     <li><span class="glyphicon glyphicon-home"></span> <a href="/">Home</a></li>
     <li><span class="glyphicon glyphicon-info-sign"></span> <a href="/about.html">About</a></li>
@@ -75,7 +75,7 @@
       <div class="row">
         <div class="col-md-8 col-md-offset-2">
           <div class="page-header">
-            <h1>Learn Markdown in 3 Minutes</h1>
+            <h1>Extending Markdown</h1>
             </p>
           </div>
         </div>
@@ -86,50 +86,43 @@
           <div class="col-md-8 col-md-offset-2">
             <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
 <html><body>
-<p>Markdown syntax is extremely simple and you can learn all you need to know within a few minutes.<!--more--></p>
-<h2 id="formatting-headings">Formatting headings</h2>
-<pre><code># First level
-## Second Level
-### Third level
-#### Fourth level
-##### Fifth level
-###### Sixth level</code></pre>
-<h2 id="bold-and-italics">
-<strong>Bold</strong> and <em>Italics</em>
-</h2>
-<pre><code>Bold: **some text**
-
-Italics:  _some other text_
-
-Also italics: *this is also italics*</code></pre>
-<h2 id="links">Links</h2>
-<pre><code>[link text](link)
-example: [click here for a web page](http://google.com)</code></pre>
-<h2 id="figures-and-images">Figures and Images</h2>
-<p>Figures are formatted the same as links but just add a <code>!</code> before the square bracked.</p>
-<pre><code>![text description](/path/to/image)</code></pre>
-<p>You can have a picture with a link:</p>
-<pre><code>[![text description](/path/to/image)](http://twitter.com)</code></pre>
-<h2 id="horizontal-lines">Horizontal lines</h2>
-<pre><code>***
-
-or
-
----</code></pre>
-<h2 id="code-and-verbatim">Code and verbatim</h2>
-<pre><code>Inline code: `some code`
-
-Code block:
-
-    some code
-    and another line of code
-    some more code
-</code></pre>
-<p>Subscript (Pandoc only)</p>
-<pre><code>R~0~</code></pre>
-<p>Superscript (Pandoc only)</p>
-<pre><code>x^2^</code></pre>
-<p>That’s most of the formatting you’ll need to get by. I’ll get into citation and table formatting on a separate page.</p>
+<p>Markdown is a lightweight format that does not offer built-in facilities for extension. Instead it is recommended to combine external templating tools to adapt the syntax to particular use cases, where necessary. To avoid an unnecessary inflation in the number of markdown flavors out there, it is recommended that language extensions are used sparingly.<!--more--></p>
+<h2 id="templating">Templating</h2>
+<p>Generally, a good strategy for extending markdown is to place custom markup inside easy to recognize delimiters. When processing the document, <em>first</em> run external filters/templating tools on the source document to convert custom markup to HTML (provided HTML is the intended output format) and <em>then</em> apply the markdown processor.</p>
+<p>Some templating tools available for this purpose are:</p>
+<ul>
+<li>
+<a href="http://www.dexy.it/">Dexy</a> filters</li>
+<li><a href="http://jinja.pocoo.org/">Jinja</a></li>
+<li><a href="http://tinlizzie.org/ometa/">OMeta</a></li>
+<li>regular expressions</li>
+<li>others…</li>
+</ul>
+<p>Some good choices for delimiters are: * Double braces <code>. * Backticks, with a prefix inside the backticks. For example,</code> <code>r content</code> ``. * others… ?</p>
+<p>Of course this is just a beginning. It would be helpful to have more detailed guidelines for templating and extensions. In particular:</p>
+<ul>
+<li>Templating needs are different in static (dexy, jinja) vs. dynamic (IPython notebook, rNotebook) use cases.</li>
+<li>Is there a standard way to protect the output of a templating engine from being garbled by the markdown processor? According to Daring Fireball, markdown processors are supposed to ignore the content of block level HTML tags. Is this the common practice of most markdown processors today? Does this mean that only known HTML tags are ignored or any XML-style tag? Is the content of these tags expected to be well-formed XML to parse correctly? …</li>
+</ul>
+<h2 id="further-notes">Further Notes</h2>
+<ul>
+<li>IPython notebook: no way to reference variables from code in the text (i.e. embed their actual values)</li>
+<li>dexy does something like this</li>
+<li>
+<code>knitr</code> (for <code>R</code>) does this</li>
+<li><p>probably can’t extend to get this to work in a generic setting, but could define a generic syntax?</p></li>
+<li>Issues regarding templating, delimeters and parsing</li>
+<li>where is the information coming from?</li>
+<li>where does the processing happen?</li>
+<li>What information can you put in a single file format?</li>
+<li>Tradeoff between flexibility/ease of use and ability to be precise</li>
+<li><p>Don’t want to get too complicated</p></li>
+<li>Composable tools/plugins</li>
+<li><p>Python Markdown has extension guidelines</p></li>
+<li>Want online resources for collaborating about Markdown</li>
+<li>documentation regarding different flavors of Markdown (where are they the same, how do they differ)</li>
+<li><p>Ana: can set something like this up in dexy</p></li>
+</ul>
 <div class="references">
 
 </div>
@@ -140,8 +133,8 @@ Code block:
               
                 <hr>
                 <div class="toc-item">
-                  <h3>Next: <a href="/basic_setup/tools-to-support-your-markdown-authoring.html">Tools to Support Your Markdown Authoring</a></h3>
-                  <p>Markdown is automatically rendered to html GitHub but can easily be parsed into a variety of other formats including PDF and LaTex. To convert seamlessly to these formats, you’ll need a document converter. Pandoc is one such open source tool that is available on all platforms. You’ll need to install a local copy to be able to run all the examples in this repo.
+                  <h3>Next: <a href="/workshop/workshop.html">Workshop June 2013</a></h3>
+                  <p>Martin Fenner and Stian Haklev organized a one day Markdown for Science workshop at the Public Library of Science HQ in San Francisco on June 8th, 2013.
 
 
 
@@ -174,12 +167,12 @@ Code block:
   title="ctx_ver=Z39.88-2004
   &amp;rft_val_fmt=info%3Aofi%2Ffmt%3Akev%3Amtx%3Adc
   &amp;rfr_id=info%3Asid%2Focoins.info%3Agenerator
-  &amp;rft.title=Learn Markdown in 3 Minutes
+  &amp;rft.title=Extending Markdown
   &amp;rft.creator=
-  &amp;rft.date=2013-01-02
+  &amp;rft.date=2013-03-01
   &amp;rft.language=EN
   &amp;rft.rights=CC0
-  &amp;rft_id=http://www.scholmd.org/basic_setup/learn-markdown-in-3-minutes.html">
+  &amp;rft_id=http://www.scholmd.org/advanced_formatting/extending-markdown.html">
 </span>
 
         <script type="text/javascript">

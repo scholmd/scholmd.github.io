@@ -5,13 +5,128 @@
         <description>Scholarly Markdown - </description>
         <link>http:/www.scholmd.org/rss.xml</link>
         <link>http:/www.scholmd.org</link>
-        <lastBuildDate>2014-07-22T04:56:20+00:00</lastBuildDate>
-        <pubDate>2014-07-22T04:56:20+00:00</pubDate>
+        <lastBuildDate>2014-07-22T08:26:37+00:00</lastBuildDate>
+        <pubDate>2014-07-22T08:26:37+00:00</pubDate>
         <ttl>1800</ttl>
 
 
         <item>
-                <title>Equations</title>
+                <title>Workshop June 2013</title>
+                <description>&lt;p&gt;Martin Fenner and Stian Haklev organized a one day &lt;em&gt;Markdown for Science&lt;/em&gt; workshop at the Public Library of Science HQ in San Francisco on June 8th, 2013.&lt;!--more--&gt;&lt;/p&gt;
+&lt;p&gt;If you attended, please list yourself on [[people-attending]] with a bit about yourself, and your ideas/wishes for the workshop.&lt;/p&gt;
+&lt;p&gt;Please add to these two pages: * &lt;a href=&quot;later%20we%20can%20clean%20this%20up%20and%20put%20some%20of%20it%20into%20[[Tools%20to%20support%20your%20markdown%20authoring]]&quot;&gt;[Tools and projects]&lt;/a&gt; * [[Scenarios, barriers to adoption, needs]]&lt;/p&gt;
+&lt;p&gt;Some of the potential outcomes of the workshop include:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;[[Todo list from workshop]]&lt;/li&gt;
+&lt;li&gt;[[Signs that MD is successing]]&lt;/li&gt;
+&lt;li&gt;[[Barriers]]&lt;/li&gt;
+&lt;li&gt;[[What is Markdown]]&lt;/li&gt;
+&lt;li&gt;Notes from discussion about the suitability of Markdown for scientific authoring (different stages, disciplines, etc)&lt;/li&gt;
+&lt;li&gt;Comprehensive list of tools/initiatives&lt;/li&gt;
+&lt;li&gt;Notes from discussion about collaboration/synergy between tools&lt;/li&gt;
+&lt;li&gt;List of interesting examples/showcase (GH repositories etc)&lt;/li&gt;
+&lt;li&gt;List of “barriers”, “obstacles” etc&lt;/li&gt;
+&lt;li&gt;Notes from discussion about way forward, applying for grants, etc&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please add your ideas below.&lt;/p&gt;
+&lt;h2 id=&quot;css-styles&quot;&gt;CSS Styles&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;swcarpentry&quot;&gt;(&lt;span class=&quot;citeproc-not-found&quot; data-reference-id=&quot;swcarpentry&quot;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt;(https://twitter.com/swcarpentry/status/332215002675150850)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;citation&quot; data-cites=&quot;_inundata&quot;&gt;(&lt;span class=&quot;citeproc-not-found&quot; data-reference-id=&quot;_inundata&quot;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt; If you can make it easy (really easy) to add CSS styles to &lt;code&gt;pre&lt;/code&gt; blocks in Markdown, you’ll be my new best friend…&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Use case is adding &amp;lt;span class=&amp;quot;highlight&amp;quot;&amp;gt; or &amp;lt;span class=&amp;quot;comment&amp;quot;&amp;gt; inside an indented block that triggers &amp;lt;pre&amp;gt;.&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;mix-markdown-with-latex&quot;&gt;Mix Markdown with LaTeX&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Paul Groth&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;One thing to say is that I like how authorea.com lets you mix and match markdown with latex. So a couple things to think about: * how do I transition from markdown to latex (do I want to?) &amp;gt; Mix and match. Write the easy stuff in Markdown and if you are used to writing tables in Latex then stick to Latex for tables. In the near future, on Authorea we could offer an automatic conversion between the two, so you could select a paragraph, click convert to markdown, and you are good to go. For the time being, you can write in Markdown and then convert the entire document to Latex, for example. Although this is still rough around the edges, it is a step in the right direction. Overall, we prefer to impose limitations on what users can do so that we can guarantee them a minimum level of conversion between MD and LaTex. In other words, if we start supporting crazy complicated tables with mini pages, multicolumn, and other (unnecessary imho) Latex environments, we will make it hard/impossible for that content to be displayed in HTML5 and then converted to MD. But, if users write more regular, simpler tables, conversion between the two (or 2+) formats can be guaranteed. So, imposing limitations is the key, we think. FYI we use Pandoc to convert between formats. - Response from Alberto and Nate, creators of Authorea.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;how do you deal with style files? &amp;gt; When exporting to pdf we convert markdown to latex and the style file is handled naturally. Online we have our own look. If we wanted to offer authorea as a platform for journals (create-&amp;gt;publish under a different name, ie not authorea but journal x), we could also allow custom css files. - Response from Alberto and Nate.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;standard-additional-markup&quot;&gt;Standard additional markup&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Philip Lord&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;It would be good to have some discussion on additional markup that might be needed for science. For example, I use [cite]doi://10.1000/1.1.1.1[/cite] or [author]Phillip Lord[/author] to define the author, within my wordpress plugins.&lt;/p&gt;
+&lt;p&gt;It would be nice to have some commonality both in the syntax (for example, “shortcodes” as I have used here) and the vocabulary. Ideally, something that will work in Markdown, but also non-markdown text syntaxes or even in word.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In Authorea we support citations, references, labels, and other Latex-native features in Markdown. We are still not sure which way scientists want to go. At the moment, if you are writing a Markdown doc you still cite using . Maybe sticking with the standard latex format is good enough for most of our users, maybe there would be a more concise syntax. We are not sure. - Response from Alberto and Nate&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Relying on LaTeX markup for features we see as essential for Scholarly Markdown is a non-starter if the aim is to move beyond just the PDF/dead wood publishing model. We’d certainly want some form of extended MD markup and a processor to write to HTML for example as well as to LaTeX, but also to one or more of the HTML-based slide stacks. - Gavin Simpson&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;the-sweet-spot-for-markdown-in-scholarly-communication&quot;&gt;The sweet spot for markdown in scholarly communication&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Karthik Ram&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Markdown’s greatest appeal is its simplicity. Adding features to support more complex use cases could be very counterproductive and we would worse off than just using &lt;code&gt;LaTeX&lt;/code&gt;. So what are some of the key features we would need to implement to make markdown a standard tool for scholarly communication? Might be worth spending some time generating such a list and possibly build some prototypes time permitting.&lt;/p&gt;
+&lt;h2 id=&quot;flavors-is-great-for-ice-cream-but-not-markdown&quot;&gt;31 flavors is great for ice cream but not markdown&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Karthik Ram&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;There are many flavors of markdown at this time. Creating yet another one does not really help. Could we look through existing implementations and identify key features that facilitate scholarly use? For e.g. GitHub has its own non-standard flavor but some of their features are perfect for use in peer-review. Could we combine useful features into a scholarly markdown flavor (ok 32 is not so bad because this one is going to be the best).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is no flavor of markdown out there now that is fully sufficient for scholarly publication. At Authorea we use Github flavored MD with some ad-hoc extensions for references, labels etc. These are all plain Latex extensions (i.e., we allow some Latex in MD). By all means, extension of MD will be necessary for science articles. And some of the extensions for science will not be useful for other uses of MD, most likely. - Response from Alberto and Nate.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;challenges&quot;&gt;Challenges&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Martin Fenner&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;What will it take for a critical mass of researchers to use markdown for authoring? I think the biggest challenge is usability - most researchers aren’t interested in learning a markup language. We therefore need nice WYSIWYG editors along the lines of Google Docs, that it is markdown (and git) underneath should matter only for the technical implementation and a small group of geeks. The other challenge is features, but here users may be much more forgiving.&lt;/p&gt;
+&lt;p&gt;One possible outcome of the workshop for me is that we are better off using the existing tools from LaTeX to online editors working directly with HTML5, and that markdown doesn’t really fill a need.&lt;/p&gt;
+&lt;h2 id=&quot;workgroup-editing-tools&quot;&gt;Workgroup: Editing Tools&lt;/h2&gt;
+&lt;p&gt;Our notes are [[here|Editing-Tools]].&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The point about hiding MD behind a GUI diminishing the point of using MD in the first place is well made and we’d do well to remember this as work progresses. I like the interface of a Linux app, &lt;a href=&quot;http://dev.midnightcoding.org/projects/gummi&quot;&gt;Gummi&lt;/a&gt;, that has a split screen interface with an editor window for LaTeX on the left and a preview of the rendered PDF on the right. As you update the code in the left pane, the document is recompiled and shown on the right. This strikes the right balance for me in having readable code with instant gratification. I suspect Gummi could be adapted right now to build MD files by use of a custom build process (via rubber or similar) - we’d only be missing the highlighting for MD syntax in the editor. - Gavin Simpson (&lt;span class=&quot;citation&quot; data-cites=&quot;ucfagls&quot;&gt;(&lt;span class=&quot;citeproc-not-found&quot; data-reference-id=&quot;ucfagls&quot;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt;(https://twitter.com/ucfagls))&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr /&gt;
+&lt;p&gt;The event is supported by a 1K Force11 Challenge prize.&lt;/p&gt;
+&lt;p&gt;Please contact the organizers&lt;span class=&quot;citation&quot; data-cites=&quot;houshuang&quot;&gt;(&lt;span class=&quot;citeproc-not-found&quot; data-reference-id=&quot;houshuang&quot;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt;(https://twitter.com/&lt;span class=&quot;citation&quot; data-cites=&quot;houshuang&quot;&gt;(&lt;span class=&quot;citeproc-not-found&quot; data-reference-id=&quot;houshuang&quot;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt;) and &lt;span class=&quot;citation&quot; data-cites=&quot;mfenner&quot;&gt;(&lt;span class=&quot;citeproc-not-found&quot; data-reference-id=&quot;mfenner&quot;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt;(https://twitter.com/&lt;span class=&quot;citation&quot; data-cites=&quot;mfenner&quot;&gt;(&lt;span class=&quot;citeproc-not-found&quot; data-reference-id=&quot;mfenner&quot;&gt;&lt;strong&gt;???&lt;/strong&gt;&lt;/span&gt;)&lt;/span&gt;) if you want to give a presentation or demo.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</description>
+                <link>http:/www.scholmd.org/workshop/workshop.html</link>
+                <guid>http:/www.scholmd.org/workshop/workshop</guid>
+                <pubDate>2013-06-01T00:00:00+00:00</pubDate>
+        </item>
+
+        <item>
+                <title>Extending Markdown</title>
+                <description>&lt;p&gt;Markdown is a lightweight format that does not offer built-in facilities for extension. Instead it is recommended to combine external templating tools to adapt the syntax to particular use cases, where necessary. To avoid an unnecessary inflation in the number of markdown flavors out there, it is recommended that language extensions are used sparingly.&lt;!--more--&gt;&lt;/p&gt;
+&lt;h2 id=&quot;templating&quot;&gt;Templating&lt;/h2&gt;
+&lt;p&gt;Generally, a good strategy for extending markdown is to place custom markup inside easy to recognize delimiters. When processing the document, &lt;em&gt;first&lt;/em&gt; run external filters/templating tools on the source document to convert custom markup to HTML (provided HTML is the intended output format) and &lt;em&gt;then&lt;/em&gt; apply the markdown processor.&lt;/p&gt;
+&lt;p&gt;Some templating tools available for this purpose are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.dexy.it/&quot;&gt;Dexy&lt;/a&gt; filters&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://jinja.pocoo.org/&quot;&gt;Jinja&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://tinlizzie.org/ometa/&quot;&gt;OMeta&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;regular expressions&lt;/li&gt;
+&lt;li&gt;others…&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some good choices for delimiters are: * Double braces &lt;code&gt;. * Backticks, with a prefix inside the backticks. For example,&lt;/code&gt; &lt;code&gt;r content&lt;/code&gt; ``. * others… ?&lt;/p&gt;
+&lt;p&gt;Of course this is just a beginning. It would be helpful to have more detailed guidelines for templating and extensions. In particular:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Templating needs are different in static (dexy, jinja) vs. dynamic (IPython notebook, rNotebook) use cases.&lt;/li&gt;
+&lt;li&gt;Is there a standard way to protect the output of a templating engine from being garbled by the markdown processor? According to Daring Fireball, markdown processors are supposed to ignore the content of block level HTML tags. Is this the common practice of most markdown processors today? Does this mean that only known HTML tags are ignored or any XML-style tag? Is the content of these tags expected to be well-formed XML to parse correctly? …&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;further-notes&quot;&gt;Further Notes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;IPython notebook: no way to reference variables from code in the text (i.e. embed their actual values)&lt;/li&gt;
+&lt;li&gt;dexy does something like this&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;knitr&lt;/code&gt; (for &lt;code&gt;R&lt;/code&gt;) does this&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;probably can’t extend to get this to work in a generic setting, but could define a generic syntax?&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Issues regarding templating, delimeters and parsing&lt;/li&gt;
+&lt;li&gt;where is the information coming from?&lt;/li&gt;
+&lt;li&gt;where does the processing happen?&lt;/li&gt;
+&lt;li&gt;What information can you put in a single file format?&lt;/li&gt;
+&lt;li&gt;Tradeoff between flexibility/ease of use and ability to be precise&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Don’t want to get too complicated&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Composable tools/plugins&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Python Markdown has extension guidelines&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;Want online resources for collaborating about Markdown&lt;/li&gt;
+&lt;li&gt;documentation regarding different flavors of Markdown (where are they the same, how do they differ)&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ana: can set something like this up in dexy&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</description>
+                <link>http:/www.scholmd.org/advanced_formatting/extending-markdown.html</link>
+                <guid>http:/www.scholmd.org/advanced_formatting/extending-markdown</guid>
+                <pubDate>2013-03-01T00:00:00+00:00</pubDate>
+        </item>
+
+        <item>
+                <title>Math</title>
                 <description>&lt;h2 id=&quot;mathml-the-html-for-math&quot;&gt;MathML the “HTML for math”&lt;/h2&gt;
 &lt;p&gt;The web (HTML5), ebook (epub3) and publishing (XML) standard for mathematical equations is &lt;a href=&quot;https://en.wikipedia.org/wiki/MathML&quot;&gt;MathML&lt;/a&gt;. Just like HTML, MathML can be highly verbose, so manual input is usually done using other tools. In particular, there are several serial math input formats (see below).&lt;!--more--&gt;&lt;/p&gt;
 &lt;p&gt;Many markdown parser tolerate HTML fragments, so MathML fragment can be used when manual input languages are not sufficient.&lt;/p&gt;
@@ -38,9 +153,39 @@
 
 &lt;/div&gt;
 </description>
-                <link>http:/www.scholmd.org/markdown_elements/equations.html</link>
-                <guid>http:/www.scholmd.org/markdown_elements/equations</guid>
-                <pubDate>2013-06-06T00:00:00+00:00</pubDate>
+                <link>http:/www.scholmd.org/markdown_elements/math.html</link>
+                <guid>http:/www.scholmd.org/markdown_elements/math</guid>
+                <pubDate>2013-02-04T00:00:00+00:00</pubDate>
+        </item>
+
+        <item>
+                <title>Figures</title>
+                <description>&lt;!--more--&gt;
+&lt;p&gt;&lt;em&gt;TODO&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</description>
+                <link>http:/www.scholmd.org/markdown_elements/figures.html</link>
+                <guid>http:/www.scholmd.org/markdown_elements/figures</guid>
+                <pubDate>2013-02-03T00:00:00+00:00</pubDate>
+        </item>
+
+        <item>
+                <title>Tables</title>
+                <description>&lt;!--more--&gt;
+&lt;p&gt;&lt;em&gt;TODO&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;related-posts&quot;&gt;Related posts&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://inundata.org/2012/12/25/formatting-tables-in-markdown/&quot;&gt;Formatting tables in markdown&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</description>
+                <link>http:/www.scholmd.org/markdown_elements/tables.html</link>
+                <guid>http:/www.scholmd.org/markdown_elements/tables</guid>
+                <pubDate>2013-02-02T00:00:00+00:00</pubDate>
         </item>
 
         <item>
@@ -107,7 +252,49 @@ treatment of germ-cell cancer.&amp;quot;&lt;/code&gt;&lt;/pre&gt;
 </description>
                 <link>http:/www.scholmd.org/markdown_elements/citations.html</link>
                 <guid>http:/www.scholmd.org/markdown_elements/citations</guid>
-                <pubDate>2013-06-03T00:00:00+00:00</pubDate>
+                <pubDate>2013-02-01T00:00:00+00:00</pubDate>
+        </item>
+
+        <item>
+                <title>Tools to Support Your Markdown Authoring</title>
+                <description>&lt;p&gt;Markdown is automatically rendered to html GitHub but can easily be parsed into a variety of other formats including PDF and LaTex. To convert seamlessly to these formats, you’ll need a document converter. &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt; is one such open source tool that is available on all platforms. You’ll need to install a local copy to be able to run all the examples in this repo.&lt;!--more--&gt;&lt;/p&gt;
+&lt;h2 id=&quot;pandoc&quot;&gt;Pandoc&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt; is a universal document converter. It works from the command line and you can quickly convert a document between any two formats. These include nearly all formats commonly used for scientific writing such as Word, Markdown, Latex, HTML and RTF.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://johnmacfarlane.net/pandoc/installing.html&quot;&gt;Download and install pandoc&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;standalone-applications&quot;&gt;Standalone applications&lt;/h2&gt;
+&lt;h3 id=&quot;texts&quot;&gt;Texts&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.texts.io&quot;&gt;Texts&lt;/a&gt; is rich editor for Markdown, with multiple export options (e.g. PDF, Microsoft Word, LaTeX, HTML, ePub).&lt;/p&gt;
+&lt;h3 id=&quot;byword&quot;&gt;ByWord&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.bywordapp.com&quot;&gt;ByWord&lt;/a&gt; is a simple text editor for OS X and iOS.&lt;/p&gt;
+&lt;h3 id=&quot;mou&quot;&gt;Mou&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://mouapp.com&quot;&gt;Mou&lt;/a&gt; is a simple, free, and powerful Markdown editor/previewer for OS X.&lt;/p&gt;
+&lt;h3 id=&quot;markdownpad&quot;&gt;MarkdownPad&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://markdownpad.com/&quot;&gt;MarkdownPad&lt;/a&gt; is a Markdown editor for Windows. Both a Free and a Pro version exist; the latter adds support for (amongst other things) GitHub Flavored Markdown and Markdown Extra (including Tables).&lt;/p&gt;
+&lt;h3 id=&quot;multimarkdown-composer&quot;&gt;MultiMarkdown Composer&lt;/h3&gt;
+&lt;p&gt;“&lt;a href=&quot;http://multimarkdown.com&quot;&gt;MultiMarkdown Composer&lt;/a&gt; is a text editor for Mac that is designed from the ground up around the MultiMarkdown Syntax. It is designed to make writing in MultiMarkdown (or Markdown) even easier than it already is, with automatic syntax highlighting, built in previews, easy export to any format that is supported by MultiMarkdown, and more!” [http://multimarkdown.com].&lt;/p&gt;
+&lt;h3 id=&quot;retext&quot;&gt;ReText&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://sourceforge.net/p/retext/home/ReText/&quot;&gt;ReText&lt;/a&gt; is an open-source, platform-independent editor for both Markdown and reStructuredText.&lt;/p&gt;
+&lt;h3 id=&quot;qute&quot;&gt;Qute&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/fbreuer/qute&quot;&gt;Qute&lt;/a&gt;, is an open source, platform-independent editor for Markdown with MathJax-integrated live-preview.&lt;/p&gt;
+&lt;h3 id=&quot;erato&quot;&gt;Erato&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://9muses.se/erato/&quot;&gt;Erato&lt;/a&gt; is a markdown editor for Mac users, supporting Github-flavored Markdown, including YAML front matter and task lists.&lt;/p&gt;
+&lt;h2 id=&quot;web-based-applications&quot;&gt;Web-based applications&lt;/h2&gt;
+&lt;h3 id=&quot;draft&quot;&gt;Draft&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://draftin.com&quot;&gt;Draft&lt;/a&gt; is a web-based markdown editor with cloud sync, image hosting and analytics.&lt;/p&gt;
+&lt;h3 id=&quot;markable&quot;&gt;Markable&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://markable.in/&quot;&gt;Markable&lt;/a&gt; is another web-based markdown editor with export and integration options.&lt;/p&gt;
+&lt;h3 id=&quot;prose.io&quot;&gt;Prose.io&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://prose.io&quot;&gt;Prose&lt;/a&gt; is a web-based markdown editor for Github Pages.&lt;/p&gt;
+&lt;h2 id=&quot;previewers&quot;&gt;Previewers&lt;/h2&gt;
+&lt;h3 id=&quot;marked&quot;&gt;Marked&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://markedapp.com&quot;&gt;Marked&lt;/a&gt; is a markdown previewer for OS X.&lt;/p&gt;
+&lt;div class=&quot;references&quot;&gt;
+
+&lt;/div&gt;
+</description>
+                <link>http:/www.scholmd.org/basic_setup/tools-to-support-your-markdown-authoring.html</link>
+                <guid>http:/www.scholmd.org/basic_setup/tools-to-support-your-markdown-authoring</guid>
+                <pubDate>2013-01-03T00:00:00+00:00</pubDate>
         </item>
 
         <item>
@@ -160,49 +347,27 @@ Code block:
 </description>
                 <link>http:/www.scholmd.org/basic_setup/learn-markdown-in-3-minutes.html</link>
                 <guid>http:/www.scholmd.org/basic_setup/learn-markdown-in-3-minutes</guid>
-                <pubDate>2013-06-02T00:00:00+00:00</pubDate>
+                <pubDate>2013-01-02T00:00:00+00:00</pubDate>
         </item>
 
         <item>
-                <title>Tools to Support Your Markdown Authoring</title>
-                <description>&lt;p&gt;Markdown is automatically rendered to html GitHub but can easily be parsed into a variety of other formats including PDF and LaTex. To convert seamlessly to these formats, you’ll need a document converter. &lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt; is one such open source tool that is available on all platforms. You’ll need to install a local copy to be able to run all the examples in this repo.&lt;!--more--&gt;&lt;/p&gt;
-&lt;h2 id=&quot;pandoc&quot;&gt;Pandoc&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&quot;http://johnmacfarlane.net/pandoc/&quot;&gt;Pandoc&lt;/a&gt; is a universal document converter. It works from the command line and you can quickly convert a document between any two formats. These include nearly all formats commonly used for scientific writing such as Word, Markdown, Latex, HTML and RTF.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://johnmacfarlane.net/pandoc/installing.html&quot;&gt;Download and install pandoc&lt;/a&gt;&lt;/p&gt;
-&lt;h2 id=&quot;standalone-applications&quot;&gt;Standalone applications&lt;/h2&gt;
-&lt;h3 id=&quot;texts&quot;&gt;Texts&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.texts.io&quot;&gt;Texts&lt;/a&gt; is rich editor for Markdown, with multiple export options (e.g. PDF, Microsoft Word, LaTeX, HTML, ePub).&lt;/p&gt;
-&lt;h3 id=&quot;byword&quot;&gt;ByWord&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.bywordapp.com&quot;&gt;ByWord&lt;/a&gt; is a simple text editor for OS X and iOS.&lt;/p&gt;
-&lt;h3 id=&quot;mou&quot;&gt;Mou&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://mouapp.com&quot;&gt;Mou&lt;/a&gt; is a simple, free, and powerful Markdown editor/previewer for OS X.&lt;/p&gt;
-&lt;h3 id=&quot;markdownpad&quot;&gt;MarkdownPad&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://markdownpad.com/&quot;&gt;MarkdownPad&lt;/a&gt; is a Markdown editor for Windows. Both a Free and a Pro version exist; the latter adds support for (amongst other things) GitHub Flavored Markdown and Markdown Extra (including Tables).&lt;/p&gt;
-&lt;h3 id=&quot;multimarkdown-composer&quot;&gt;MultiMarkdown Composer&lt;/h3&gt;
-&lt;p&gt;“&lt;a href=&quot;http://multimarkdown.com&quot;&gt;MultiMarkdown Composer&lt;/a&gt; is a text editor for Mac that is designed from the ground up around the MultiMarkdown Syntax. It is designed to make writing in MultiMarkdown (or Markdown) even easier than it already is, with automatic syntax highlighting, built in previews, easy export to any format that is supported by MultiMarkdown, and more!” [http://multimarkdown.com].&lt;/p&gt;
-&lt;h3 id=&quot;retext&quot;&gt;ReText&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://sourceforge.net/p/retext/home/ReText/&quot;&gt;ReText&lt;/a&gt; is an open-source, platform-independent editor for both Markdown and reStructuredText.&lt;/p&gt;
-&lt;h3 id=&quot;qute&quot;&gt;Qute&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/fbreuer/qute&quot;&gt;Qute&lt;/a&gt;, is an open source, platform-independent editor for Markdown with MathJax-integrated live-preview.&lt;/p&gt;
-&lt;h3 id=&quot;erato&quot;&gt;Erato&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://9muses.se/erato/&quot;&gt;Erato&lt;/a&gt; is a markdown editor for Mac users, supporting Github-flavored Markdown, including YAML front matter and task lists.&lt;/p&gt;
-&lt;h2 id=&quot;web-based-applications&quot;&gt;Web-based applications&lt;/h2&gt;
-&lt;h3 id=&quot;draft&quot;&gt;Draft&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://draftin.com&quot;&gt;Draft&lt;/a&gt; is a web-based markdown editor with cloud sync, image hosting and analytics.&lt;/p&gt;
-&lt;h3 id=&quot;markable&quot;&gt;Markable&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://markable.in/&quot;&gt;Markable&lt;/a&gt; is another web-based markdown editor with export and integration options.&lt;/p&gt;
-&lt;h3 id=&quot;prose.io&quot;&gt;Prose.io&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://prose.io&quot;&gt;Prose&lt;/a&gt; is a web-based markdown editor for Github Pages.&lt;/p&gt;
-&lt;h2 id=&quot;previewers&quot;&gt;Previewers&lt;/h2&gt;
-&lt;h3 id=&quot;marked&quot;&gt;Marked&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;http://markedapp.com&quot;&gt;Marked&lt;/a&gt; is a markdown previewer for OS X.&lt;/p&gt;
+                <title>What is Scholarly Markdown</title>
+                <description>&lt;!--more--&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Markdown that supports the requirements of scientific texts&lt;/li&gt;
+&lt;li&gt;Markdown as format that glues open scientific text resources together&lt;/li&gt;
+&lt;li&gt;A reference implementation with documentation and tests&lt;/li&gt;
+&lt;li&gt;A community&lt;/li&gt;
+&lt;li&gt;A hashtag: &lt;a href=&quot;https://twitter.com/search?q=%23scholmd&amp;amp;src=typd&quot;&gt;#scholmd&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 &lt;div class=&quot;references&quot;&gt;
 
 &lt;/div&gt;
 </description>
-                <link>http:/www.scholmd.org/basic_setup/tools-to-support-your-markdown-authoring.html</link>
-                <guid>http:/www.scholmd.org/basic_setup/tools-to-support-your-markdown-authoring</guid>
-                <pubDate>2013-06-01T00:00:00+00:00</pubDate>
+                <link>http:/www.scholmd.org/basic_setup/what-is-scholarly-markdown.html</link>
+                <guid>http:/www.scholmd.org/basic_setup/what-is-scholarly-markdown</guid>
+                <pubDate>2013-01-01T00:00:00+00:00</pubDate>
         </item>
 
 
