@@ -4,7 +4,7 @@
  <title>Scholarly Markdown</title>
  <link href="http:/www.scholmd.org//atom.xml" rel="self"/>
  <link href="http:/www.scholmd.org"/>
- <updated>2014-07-22T08:50:19+00:00</updated>
+ <updated>2014-09-04T08:28:10+00:00</updated>
  <id>http:/www.scholmd.org</id>
  <author>
    <name></name>
@@ -358,7 +358,6 @@ Code block:
    <updated>2013-01-01T00:00:00+00:00</updated>
    <id>http:/www.scholmd.org/basic_setup/what-is-scholarly-markdown</id>
    <content type="html">&lt;!--more--&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Markdown that supports the requirements of scientific texts&lt;/li&gt;
 &lt;li&gt;Markdown as format that glues open scientific text resources together&lt;/li&gt;

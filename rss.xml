@@ -5,8 +5,8 @@
         <description>Scholarly Markdown - </description>
         <link>http:/www.scholmd.org/rss.xml</link>
         <link>http:/www.scholmd.org</link>
-        <lastBuildDate>2014-07-22T08:50:19+00:00</lastBuildDate>
-        <pubDate>2014-07-22T08:50:19+00:00</pubDate>
+        <lastBuildDate>2014-09-04T08:28:10+00:00</lastBuildDate>
+        <pubDate>2014-09-04T08:28:10+00:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -353,7 +353,6 @@ Code block:
         <item>
                 <title>What is Scholarly Markdown</title>
                 <description>&lt;!--more--&gt;
-
 &lt;ul&gt;
 &lt;li&gt;Markdown that supports the requirements of scientific texts&lt;/li&gt;
 &lt;li&gt;Markdown as format that glues open scientific text resources together&lt;/li&gt;
